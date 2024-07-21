@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Compile') {
+      steps {
+        sh './mvnw clean compile'
+      }
+    }
+
   }
 }

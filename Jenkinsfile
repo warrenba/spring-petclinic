@@ -21,6 +21,7 @@ pipeline {
     stage('test') {
       steps {
         sh './mvnw test'
+        junit(testResults: '**/target/surefire-reports/TEST-*.xml', allowEmptyResults: true, checksName: 'Health', healthScaleFactor: 2)
       }
     }
 

@@ -18,12 +18,6 @@ pipeline {
       }
     }
 
-    stage('Compile') {
-      steps {
-        sh './mvnw clean compile'
-      }
-    }
-
     stage('test') {
       steps {
         sh './mvnw test'
